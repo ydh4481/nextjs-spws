@@ -1,4 +1,27 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Top-level folders
+
+| 폴더명 | 설명                               |
+| ------ | ---------------------------------- |
+| app    | App Router                         |
+| pages  | Pages Router                       |
+| public | Static assets to be served         |
+| src    | Optional application source folder |
+
+## Top-level files
+
+| 파일명         | 설명                                         |
+| -------------- | -------------------------------------------- |
+| next.config.js | Next.js 설정                                 |
+| package.json   | 프로젝트 메타데이터, 의존성 및 스크립트 정의 |
+|                |                                              |
+|                |                                              |
+|                |                                              |
+|                |                                              |
+|                |                                              |
+|                |                                              |
+|                |                                              |
+|                |                                              |
+|                |                                              |
 
 ## Getting Started
 

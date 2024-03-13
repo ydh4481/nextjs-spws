@@ -1,3 +1,51 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": ["next/core-web-vitals", "next", "eslint:recommend", "plugin:storybook/recommended", "prettier"],
+  "plugins": ["@typescript-eslint", "no-null", "prettier"],
+  "overrides": [
+    {
+      "files": ["*.stories.@(ts|tsx|js|jsx|mjs|cjs)"]
+    }
+  ],
+  "globals": {
+    "React": "readonly"
+  },
+  "rules": {
+    "prettier/prettier": "warn",
+    "no-console": "warn",
+    "@typescript-eslint/no-unused-vars": "error",
+    "import/order": [
+      "error",
+      {
+        "groups": ["builtin", "external", "internal", ["parent", "sibling"], "object", "type", "index"],
+        "pathGroups": [
+          {
+            "pattern": "react",
+            "group": "external",
+            "position": "before"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": ["react", "next"],
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ],
+    "no-unused-vars": "warn",
+    "sort-imports": [
+      "error",
+      {
+        "ignoreCase": true,
+        "ignoreDeclarationSort": true,
+        "ignoreMemberSort": false,
+        "allowSeparatedGroups": true
+      }
+    ],
+    "react/react-in-jsx-scope": "off",
+    "@typescript-eslint/consistent-type-imports": "error",
+    "no-null/no-null": 2,
+    "curly": ["error", "multi-line", "consistent"],
+    "nonblock-statement-body-position": ["error", "beside"]
+  }
 }
